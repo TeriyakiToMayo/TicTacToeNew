@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.wiley.fordummies.androidsdk.tictactoe"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support:design:27.0.2'
+    implementation 'com.android.support:preference-v7:27.0.2'
+    implementation 'com.android.support:recyclerview-v7:27.0.2'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:5.3.0'
+    compile 'com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:0.2.0'
+    compile 'com.mapbox.mapboxsdk:mapbox-android-plugin-building:0.1.0'
+    compile 'com.mapbox.mapboxsdk:mapbox-java-geojson:2.2.9'
+    compile 'com.mapbox.mapboxsdk:mapbox-android-services:2.2.9'
+    compile 'com.mapbox.mapboxsdk:mapbox-android-telemetry:2.2.9'
+    compile 'com.mapbox.mapboxsdk:mapbox-android-ui:2.2.9'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
